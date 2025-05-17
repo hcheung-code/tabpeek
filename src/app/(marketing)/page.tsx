@@ -1,4 +1,4 @@
-import { ArrowRightIcon, MousePointerIcon, MousePointerClickIcon, EyeIcon } from "lucide-react";
+import { ArrowRightIcon, MousePointerIcon, MousePointerClickIcon, EyeIcon, CheckIcon } from "lucide-react";
 import { Button } from "@/components/ui/button"
 import { ChromeBrowserDemo } from "./_components/ChromeBrowserDemo";
 
@@ -34,8 +34,9 @@ export default function HomePage() {
         <ChromeBrowserDemo />
       </div>
       
-      {/* Features in cards - now with hover interactions */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+      {/* Combined Features Section */}
+      <h2 className="text-4xl font-bold text-center mb-16">Features</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
         <div className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-pointer relative overflow-hidden">
           <div className="absolute inset-0 bg-blue-500/10 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-2xl"></div>
           <div className="flex flex-col h-full relative z-10">
@@ -51,7 +52,7 @@ export default function HomePage() {
         </div>
         
         <div className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-pointer relative overflow-hidden">
-          <div className="absolute inset-0 bg-red-500/10 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-2xl"></div>
+          <div className="absolute inset-0 bg-blue-500/10 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-2xl"></div>
           <div className="flex flex-col h-full relative z-10">
             <div className="flex items-center mb-4">
               <MousePointerClickIcon className="h-6 w-6 mr-2 text-logo-dark" />
@@ -65,7 +66,7 @@ export default function HomePage() {
         </div>
         
         <div className="group bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-pointer relative overflow-hidden">
-          <div className="absolute inset-0 bg-green-500/10 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-2xl"></div>
+          <div className="absolute inset-0 bg-blue-500/10 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-2xl"></div>
           <div className="flex flex-col h-full relative z-10">
             <div className="flex items-center mb-4">
               <EyeIcon className="h-6 w-6 mr-2 text-logo-dark" />
@@ -75,6 +76,48 @@ export default function HomePage() {
               Easily identify tabs with identical websites or icons. TabPeek displays titles and details so you can stay organized.
             </p>
             <div className="h-1 w-16 bg-logo-dark mt-auto transform transition-all duration-300 group-hover:w-full"></div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Additional Features */}
+      <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 mb-20 shadow-sm hover:shadow-lg transition-all duration-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+          <div className="flex items-start gap-3 group hover:bg-blue-50/50 p-3 rounded-lg transition-colors duration-200 cursor-pointer">
+            <div className="w-8 h-8 rounded-full bg-logo-dark flex items-center justify-center text-white mt-1">
+              <CheckIcon className="h-4 w-4" />
+            </div>
+            <div>
+              <h4 className="font-semibold mb-1">Seamless Integration</h4>
+              <p className="text-gray-700 text-sm">Works effortlessly with your browser's native tab groups</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 group hover:bg-blue-50/50 p-3 rounded-lg transition-colors duration-200 cursor-pointer">
+            <div className="w-8 h-8 rounded-full bg-logo-dark flex items-center justify-center text-white mt-1">
+              <CheckIcon className="h-4 w-4" />
+            </div>
+            <div>
+              <h4 className="font-semibold mb-1">Customizable Preview</h4>
+              <p className="text-gray-700 text-sm">Choose how you want your tab previews to appear</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 group hover:bg-blue-50/50 p-3 rounded-lg transition-colors duration-200 cursor-pointer">
+            <div className="w-8 h-8 rounded-full bg-logo-dark flex items-center justify-center text-white mt-1">
+              <CheckIcon className="h-4 w-4" />
+            </div>
+            <div>
+              <h4 className="font-semibold mb-1">Smooth Performance</h4>
+              <p className="text-gray-700 text-sm">Optimized for speed, even with dozens of tab groups</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 group hover:bg-blue-50/50 p-3 rounded-lg transition-colors duration-200 cursor-pointer">
+            <div className="w-8 h-8 rounded-full bg-logo-dark flex items-center justify-center text-white mt-1">
+              <CheckIcon className="h-4 w-4" />
+            </div>
+            <div>
+              <h4 className="font-semibold mb-1">Clean Design</h4>
+              <p className="text-gray-700 text-sm">Unobtrusive yet always ready when you need it</p>
+            </div>
           </div>
         </div>
       </div>
@@ -167,43 +210,8 @@ export default function HomePage() {
                 <path d="M20 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
             </div>
-            <h4 className="font-semibold text-lg mb-3">Professionals</h4>
-            <p className="text-gray-700">Juggling multiple tasks and documents</p>
-          </div>
-        </div>
-      </div>
-      
-      {/* Additional features */}
-      <div className="mt-20 bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-sm group hover:shadow-lg transition-all duration-300">
-        <h3 className="text-2xl font-semibold mb-6 text-center">More Amazing Features</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
-          <div className="flex items-start gap-3 group/item hover:bg-blue-50/50 p-3 rounded-lg transition-colors duration-200 cursor-pointer">
-            <div className="w-6 h-6 rounded-full bg-logo-dark flex items-center justify-center text-white text-sm mt-1 group-hover/item hover:bg-blue-50/50 p-3 rounded-lg transition-colors duration-200 cursor-pointer">✓</div>
-            <div>
-              <h4 className="font-semibold mb-1">Seamless Integration</h4>
-              <p className="text-gray-700 text-sm">Works effortlessly with your browser's native tab groups</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-3 group/item hover:bg-blue-50/50 p-3 rounded-lg transition-colors duration-200 cursor-pointer">
-            <div className="w-6 h-6 rounded-full bg-logo-dark flex items-center justify-center text-white text-sm mt-1 group-hover/item hover:bg-blue-50/50 p-3 rounded-lg transition-colors duration-200 cursor-pointer">✓</div>
-            <div>
-              <h4 className="font-semibold mb-1">Customizable Preview</h4>
-              <p className="text-gray-700 text-sm">Choose how you want your tab previews to appear</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-3 group/item hover:bg-blue-50/50 p-3 rounded-lg transition-colors duration-200 cursor-pointer">
-            <div className="w-6 h-6 rounded-full bg-logo-dark flex items-center justify-center text-white text-sm mt-1 group-hover/item hover:bg-blue-50/50 p-3 rounded-lg transition-colors duration-200 cursor-pointer">✓</div>
-            <div>
-              <h4 className="font-semibold mb-1">Smooth Performance</h4>
-              <p className="text-gray-700 text-sm">Optimized for speed, even with dozens of tab groups</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-3 group/item hover:bg-blue-50/50 p-3 rounded-lg transition-colors duration-200 cursor-pointer">
-            <div className="w-6 h-6 rounded-full bg-logo-dark flex items-center justify-center text-white text-sm mt-1 group-hover/item hover:bg-blue-50/50 p-3 rounded-lg transition-colors duration-200 cursor-pointer">✓</div>
-            <div>
-              <h4 className="font-semibold mb-1">Clean Design</h4>
-              <p className="text-gray-700 text-sm">Unobtrusive yet always ready when you need it</p>
-            </div>
+            <h4 className="font-semibold text-lg mb-3">Product Managers</h4>
+            <p className="text-gray-700">Juggling multiple tasks with numerous open tabs</p>
           </div>
         </div>
       </div>
