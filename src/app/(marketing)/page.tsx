@@ -229,7 +229,9 @@ export default function HomePage() {
             this app has saved me so much time and frustration!"
           </p>
           <div className="flex items-center">
-            <div className="w-10 h-10 rounded-full bg-logo-dark"></div>
+            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-logo-dark">
+              <img src="/henry.png" alt="Henry C portrait" className="w-full h-full object-cover" />
+            </div>
             <div className="ml-4">
               <p className="font-semibold text-logo-dark">Henry C</p>
               <p className="text-sm text-gray-600">Technical Program Manager</p>
