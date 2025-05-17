@@ -1,6 +1,9 @@
-import { clerkMiddleware } from '@clerk/nextjs/server'
+import { NextRequest, NextResponse } from 'next/server'
 
-export default clerkMiddleware()
+export function middleware(_request: NextRequest) {
+  // You can add custom middleware logic here in the future if needed
+  return NextResponse.next()
+}
 
 export const config = {
   matcher: [

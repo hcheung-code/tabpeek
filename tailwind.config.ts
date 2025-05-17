@@ -36,6 +36,9 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
+			'logo-dark': '#34495e',   // Main dark blue from your logo
+			'logo-light': '#b0c4d8',  // Light blue from your logo
+			'logo-cream': '#f6f3ec',  // Off-white/cream from your logo
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
