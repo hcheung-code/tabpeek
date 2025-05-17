@@ -8,20 +8,22 @@ import { BrandLogo } from "@/components/ui/BrandLogo";
 
 export function NavBar() {
     return (
-        <header className="flex py-6 shadow-xl fixed top-0 w-full z-10 bg-background/95">
-            <nav className="flex items-center gap-10 container font-semibold">
-                <Link href="/" className="mr-auto">
-                <BrandLogo />
+        <header className="flex py-4 md:py-6 shadow-xl fixed top-0 w-full z-10 bg-background/95">
+            <nav className="flex flex-wrap items-center justify-between w-full container font-semibold">
+                <Link href="/" className="flex-shrink-0 mb-2 md:mb-0">
+                    <BrandLogo />
                 </Link>
-                <Link className="text-lg" href="#about">
-                    About
-                </Link>
-                <Link className="text-lg" href="#">
-                    Features
-                </Link>
-                <Link className="text-lg" href="#">
-                    Download Now
-                </Link>
+                <div className="flex flex-wrap gap-4 md:gap-10">
+                    <Link className="text-sm md:text-lg whitespace-nowrap" href="#about">
+                        About
+                    </Link>
+                    <Link className="text-sm md:text-lg whitespace-nowrap" href="#">
+                        Features
+                    </Link>
+                    <Link className="text-sm md:text-lg whitespace-nowrap" href="#">
+                        Download Now
+                    </Link>
+                </div>
             </nav>
         </header>
     )
