@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import '../globals.css'
 import { NavBar } from './_components/NavBar'
+import Script from 'next/script'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -32,6 +33,18 @@ export default function MarketingLayout({
           </header>
           {children}
         </div>
+        <Script 
+          async src="https://www.googletagmanager.com/gtag/js?id=G-JT9NWSBESF"
+          strategy="beforeInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JT9NWSBESF');
+          `}
+        </Script>
       </body>
     </html>
   )
